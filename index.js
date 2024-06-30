@@ -1,9 +1,10 @@
 import express from "express";
 import axios from "axios";
-import bodyParser from "body-parser"
+import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
+const apiToken = "API_TOKEN";
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -14,9 +15,9 @@ app.get("/", (req,res) => {
 
 app.post("/weather", async(req, res) => {
 
-    const result = await axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + req.body.city +"&units=metric&appid=1a9d0eff3324803274c33d35585b9382");
+    const result = await axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + req.body.city +"&units=metric&appid="+apiToken);
 
-    const ans = await axios.get("http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=" + result.data.coord.lat + "&lon=" + result.data.coord.lon + "&appid=1a9d0eff3324803274c33d35585b9382")
+    const ans = await axios.get("http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=" + result.data.coord.lat + "&lon=" + result.data.coord.lon + "&appid="+apiToken);
 
     const date = new Date(ans.data.list[0].dt * 1000);
 

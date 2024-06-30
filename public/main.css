@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
+}
+
+.main{
+    background-color:aliceblue; 
+    border-radius: 2rem;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:130px;
+    padding: 10px;
+    padding-top: 50px;
+    color: rgb(205, 202, 202);
+    background-color: #001F3F;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.pulse{
+    width: 350px; 
+    height: 200px;
+    background-color: rgb(195, 217, 236); 
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0rem;
+    margin-top: 5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+city{
+    display: flex;
+    align-items: center;
+}
+
+#cityInput{
+    width: 50%;
+    padding: 10px; 
+    font-size: 16px; 
+    border-radius: 1em;    
+}
+
+.pulse #done{
+    width: 20%;
+    padding: 10px; 
+    font-size: 16px; 
+    border-radius: 1em;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+    gap: 70px;
+}
+
+.temperature{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.content{
+    padding-top: 20px;
+}
+
+ans{
+    font-weight:600;
+}
+
+.req{
+    display: flex;
+    justify-content: center;
+}
+
+.air{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-left: 2rem;
+}
+
+ul{
+    list-style-type: None;
+}
+
+li{
+    float: left;
+    padding: 16px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="title">
+                <h1>Weather in <%= city %></h1>
+            </div>
+            <p align="right"><%= date %></p>
+        </div>
+
+        <div class="container">
+            <div class="temperature">
+                <p><%= temp %>°C</p>
+            </div>
+            <div class="content">
+                <p>feels like: <ans><%= feels_like %>°C</ans></p>
+                <p>Pressure: <ans><%= pressure %>hPa</ans></p>
+                <p>Humidity: <ans><%= humidity %>%</ans></p>
+                <p>Wind Speed: <ans><%= wind_speed %>m/s</ans></p>
+                <p>Wind Direction: <ans><%= wind_dir %>°</ans></p>
+            </div>
+        </div>
+        <div class="req">
+            <div class="air">
+                <h3>Pollutants Weightage:</h3>
+                <ul>
+                    <li>CO: <ans><%= co%>μg/m3</ans> </li>
+                    <li>NO2: <ans><%= no2%>μg/m3</ans> </li>
+                    <li>SO2: <ans><%= so2%>μg/m3</ans> </li>
+                    <li>NH3: <ans><%= nh3%>μg/m3</ans> </li>
+                </ul>
+                <h4>Air Quality: <%= aqi %>/5</h4>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

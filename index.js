@@ -1,10 +1,12 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import env from "dotenv";
 
 const app = express();
 const port = 3000;
-const apiToken = "API_TOKEN";
+env.config();
+const apiToken = process.env.API_TOKEN;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
